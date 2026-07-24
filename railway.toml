@@ -1,0 +1,9 @@
+[build]
+cbuilder = "nixpacks"
+
+[deploy]
+startCommand = "docker-compose up"
+healthcheckPath = "/api/health"
+healthcheckTimeout = 300
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
